@@ -1,0 +1,16 @@
+pipeline{
+agent any{
+stages{
+stage(Build assets)
+{
+agent any{
+echo "Building assets..."
+}
+}
+stage(Test){
+agent any{
+echo "Testing stuff..."
+}
+}
+}
+}}
